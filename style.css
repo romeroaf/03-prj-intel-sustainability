@@ -79,16 +79,9 @@ section {
   margin: 60px auto;
   /* Padding for mobile */
   padding: 0 20px;
-  /* Create a responsive grid */
-  display: grid;
-  /* 3 columns on desktop, responsive */
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  /* Space between cards */
-  gap: 30px;
 }
 
-/* Individual Timeline Cards */
-section div {
+section .timeline-card {
   /* White background for cards */
   background: white;
   /* Add modern shadow */
@@ -104,21 +97,17 @@ section div {
 }
 
 /* Hover effect for cards - more engaging with multiple transforms */
-section div:hover {
+section .timeline-card:hover {
   /* Dramatic shadow for depth */
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
   /* Lift card up and add subtle scale */
   transform: translateY(-8px) scale(1.02);
-}
-
-/* Add subtle border highlight on hover */
-section div:hover {
   /* Adds a light border glow effect */
   border: 1px solid rgba(0, 113, 197, 0.1);
 }
 
 /* Year heading in cards */
-section h2 {
+section .timeline-card h2 {
   /* Large year text */
   font-size: 36px;
   /* Intel blue color */
@@ -132,7 +121,7 @@ section h2 {
 }
 
 /* Year heading color intensifies on card hover */
-section div:hover h2 {
+section .timeline-card:hover h2 {
   /* Darker, more vibrant blue on hover */
   color: #0054a0;
   /* Subtle text shadow for depth */
@@ -140,7 +129,7 @@ section div:hover h2 {
 }
 
 /* Card title */
-section h3 {
+section .timeline-card h3 {
   /* Readable font size */
   font-size: 20px;
   /* Dark color for contrast */
@@ -154,13 +143,13 @@ section h3 {
 }
 
 /* Title becomes more prominent on hover */
-section div:hover h3 {
+section .timeline-card:hover h3 {
   /* Slightly darker for emphasis */
   color: #0071c5;
 }
 
 /* Card description text */
-section p {
+section .timeline-card p {
   /* Comfortable font size */
   font-size: 15px;
   /* Light gray for subtle appearance */
@@ -172,13 +161,13 @@ section p {
 }
 
 /* Text becomes darker and more readable on hover */
-section div:hover p {
+section .timeline-card:hover p {
   /* Darker text for better visibility */
   color: #333;
 }
 
 /* Card Images */
-.card-image {
+section .timeline-card .card-image {
   /* Full width of card */
   width: 100%;
   /* Keep aspect ratio */
@@ -196,33 +185,33 @@ section div:hover p {
 }
 
 /* Image zoom effect on card hover */
-section div:hover .card-image {
+section .timeline-card:hover .card-image {
   /* Subtle zoom creates depth and visual interest */
   transform: scale(1.05);
 }
 
-/* Gradient backgrounds for cards without images (cards 5, 6, 7, 8, 9) */
-section div:nth-child(5) {
+/* Gradient backgrounds for cards without images */
+section .timeline-card.card-5 {
   /* Green gradient for environmental focus */
   background: linear-gradient(135deg, #f0f9e8 0%, #e8f5e9 100%);
 }
 
-section div:nth-child(6) {
+section .timeline-card.card-6 {
   /* Blue gradient for RISE strategy */
   background: linear-gradient(135deg, #e3f2fd 0%, #f1f5fe 100%);
 }
 
-section div:nth-child(7) {
+section .timeline-card.card-7 {
   /* Teal gradient for net-zero commitment */
   background: linear-gradient(135deg, #e0f7f4 0%, #e0f2f1 100%);
 }
 
-section div:nth-child(8) {
+section .timeline-card.card-8 {
   /* Yellow-green gradient for renewable energy */
   background: linear-gradient(135deg, #fffde7 0%, #f1f8e9 100%);
 }
 
-section div:nth-child(9) {
+section .timeline-card.card-9 {
   /* Purple gradient for sustainability summit */
   background: linear-gradient(135deg, #f3e5f5 0%, #ede7f6 100%);
 }
