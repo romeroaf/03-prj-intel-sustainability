@@ -1,0 +1,268 @@
+/* Modern, clean design for Intel Sustainability Timeline */
+
+* {
+  /* Remove default browser margins and padding */
+  margin: 0;
+  padding: 0;
+  /* Make sizing consistent */
+  box-sizing: border-box;
+}
+
+body {
+  /* Clean, modern font */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Dark text for readability */
+  color: #333;
+  /* Light background */
+  background-color: #f5f5f5;
+  /* Smooth line height for readability */
+  line-height: 1.6;
+}
+
+/* Hero Header Section */
+header {
+  /* Intel blue background - modern and professional */
+  background: linear-gradient(135deg, #0071c5 0%, #00a4ef 100%);
+  /* Text color white for contrast */
+  color: white;
+  /* Padding for spacing around content */
+  padding: 60px 20px;
+  /* Center content */
+  text-align: center;
+}
+
+header div {
+  /* Center content and set max width */
+  max-width: 800px;
+  /* Auto margins center the div horizontally */
+  margin: 0 auto;
+}
+
+/* Intel Logo */
+header img {
+  /* Resize logo to a modern, proportional size */
+  width: 80px;
+  height: auto;
+  /* Add spacing below logo */
+  margin-bottom: 20px;
+}
+
+/* Main Heading */
+header h1 {
+  /* Large, modern font size */
+  font-size: 48px;
+  /* Add spacing below */
+  margin-bottom: 20px;
+  /* Modern font weight */
+  font-weight: 600;
+  /* Smooth letter spacing */
+  letter-spacing: 0.5px;
+}
+
+/* Subheading */
+header p {
+  /* Slightly larger text for better readability */
+  font-size: 18px;
+  /* Light opacity for subtle effect */
+  opacity: 0.95;
+  /* Max width for readability */
+  max-width: 600px;
+  /* Center within container */
+  margin: 0 auto;
+}
+
+/* Timeline Cards Section */
+section {
+  /* Maximum width for content */
+  max-width: 1200px;
+  /* Center the section */
+  margin: 60px auto;
+  /* Padding for mobile */
+  padding: 0 20px;
+  /* Create a responsive grid */
+  display: grid;
+  /* 3 columns on desktop, responsive */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  /* Space between cards */
+  gap: 30px;
+}
+
+/* Individual Timeline Cards */
+section div {
+  /* White background for cards */
+  background: white;
+  /* Add modern shadow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  /* Rounded corners for modern look */
+  border-radius: 12px;
+  /* Internal spacing */
+  padding: 30px;
+  /* Smooth transition for all hover effects (0.35s for smooth animation) */
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* Prevent overflow to keep border-radius clean */
+  overflow: hidden;
+}
+
+/* Hover effect for cards - more engaging with multiple transforms */
+section div:hover {
+  /* Dramatic shadow for depth */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  /* Lift card up and add subtle scale */
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Add subtle border highlight on hover */
+section div:hover {
+  /* Adds a light border glow effect */
+  border: 1px solid rgba(0, 113, 197, 0.1);
+}
+
+/* Year heading in cards */
+section h2 {
+  /* Large year text */
+  font-size: 36px;
+  /* Intel blue color */
+  color: #0071c5;
+  /* Add spacing */
+  margin-bottom: 10px;
+  /* Modern font weight */
+  font-weight: 700;
+  /* Smooth transition for color change on hover */
+  transition: color 0.35s ease;
+}
+
+/* Year heading color intensifies on card hover */
+section div:hover h2 {
+  /* Darker, more vibrant blue on hover */
+  color: #0054a0;
+  /* Subtle text shadow for depth */
+  text-shadow: 0 2px 4px rgba(0, 113, 197, 0.15);
+}
+
+/* Card title */
+section h3 {
+  /* Readable font size */
+  font-size: 20px;
+  /* Dark color for contrast */
+  color: #333;
+  /* Add spacing below */
+  margin-bottom: 15px;
+  /* Modern font weight */
+  font-weight: 600;
+  /* Smooth transition for title effects */
+  transition: color 0.35s ease;
+}
+
+/* Title becomes more prominent on hover */
+section div:hover h3 {
+  /* Slightly darker for emphasis */
+  color: #0071c5;
+}
+
+/* Card description text */
+section p {
+  /* Comfortable font size */
+  font-size: 15px;
+  /* Light gray for subtle appearance */
+  color: #555;
+  /* Good line height for readability */
+  line-height: 1.7;
+  /* Smooth transition for text color */
+  transition: color 0.35s ease;
+}
+
+/* Text becomes darker and more readable on hover */
+section div:hover p {
+  /* Darker text for better visibility */
+  color: #333;
+}
+
+/* Card Images */
+.card-image {
+  /* Full width of card */
+  width: 100%;
+  /* Keep aspect ratio */
+  height: auto;
+  /* Add spacing below image */
+  margin-bottom: 20px;
+  /* Rounded corners for modern look */
+  border-radius: 8px;
+  /* Subtle shadow under image */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* Make image display nicely */
+  display: block;
+  /* Smooth zoom transition on hover */
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Image zoom effect on card hover */
+section div:hover .card-image {
+  /* Subtle zoom creates depth and visual interest */
+  transform: scale(1.05);
+}
+
+/* Gradient backgrounds for cards without images (cards 5, 6, 7, 8, 9) */
+section div:nth-child(5) {
+  /* Green gradient for environmental focus */
+  background: linear-gradient(135deg, #f0f9e8 0%, #e8f5e9 100%);
+}
+
+section div:nth-child(6) {
+  /* Blue gradient for RISE strategy */
+  background: linear-gradient(135deg, #e3f2fd 0%, #f1f5fe 100%);
+}
+
+section div:nth-child(7) {
+  /* Teal gradient for net-zero commitment */
+  background: linear-gradient(135deg, #e0f7f4 0%, #e0f2f1 100%);
+}
+
+section div:nth-child(8) {
+  /* Yellow-green gradient for renewable energy */
+  background: linear-gradient(135deg, #fffde7 0%, #f1f8e9 100%);
+}
+
+section div:nth-child(9) {
+  /* Purple gradient for sustainability summit */
+  background: linear-gradient(135deg, #f3e5f5 0%, #ede7f6 100%);
+}
+
+/* Footer text styling */
+.footer-text {
+  /* Maximum width for content alignment */
+  max-width: 1200px;
+  /* Center the container, but align text right */
+  margin: 30px auto;
+  /* Add padding for spacing */
+  padding: 0 20px;
+  /* Align text to the right */
+  text-align: right;
+  /* Make text smaller and subtle */
+  font-size: 14px;
+  /* Light gray color for de-emphasis */
+  color: #999;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Stack layout on smaller screens */
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  /* Smaller heading on mobile */
+  header h1 {
+    font-size: 36px;
+  }
+
+  /* Smaller subheading on mobile */
+  header p {
+    font-size: 16px;
+  }
+
+  /* Footer text on mobile */
+  .footer-text {
+    /* Center on mobile for better readability */
+    text-align: center;
+  }
+}
